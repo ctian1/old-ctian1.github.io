@@ -1,0 +1,100 @@
+@charset "utf-8";
+// @import "../bulma-0.7.5/bulma.sass";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+// // Set your brand colors
+// $purple: #8A4D76;
+// $pink: #FA7C91;
+// $brown: #757763;
+// $beige-light: #D0D1CD;
+// $beige-lighter: #EFF0EB;
+
+// // Update Bulma's global variables
+// $family-sans-serif: "Nunito", sans-serif;
+// $grey-dark: $brown;
+// $grey-light: $beige-light;
+// $primary: $purple;
+// $link: $pink;
+
+// $widescreen-enabled: false;
+// $fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+// $body-background-color: $beige-lighter;
+// $control-border-width: 2px;
+// $input-border-color: transparent;
+// $input-shadow: none;
+
+// Import only what you need from Bulma
+@import "../bulma-0.7.5/sass/utilities/_all.sass";
+@import "../bulma-0.7.5/sass/base/_all.sass";
+@import "../bulma-0.7.5/sass/elements/button.sass";
+@import "../bulma-0.7.5/sass/elements/container.sass";
+@import "../bulma-0.7.5/sass/elements/title.sass";
+// @import "../bulma-0.7.5/sass/form/_all.sass";
+// @import "../bulma-0.7.5/sass/components/navbar.sass";
+@import "../bulma-0.7.5/sass/components/level.sass";
+// @import "../bulma-0.7.5/sass/layout/hero.sass";
+@import "../bulma-0.7.5/sass/layout/section.sass";
+
+@import "spacing.scss";
+
+body {
+	margin-top: 2rem;
+}
+
+.container {
+	max-width: 720px;
+}
+
+// body > {
+// 	.container, .section {
+// 		padding: 1.5rem;
+// 	}
+// }
+
+.description {
+	max-width: 300px;
+	line-height: 1.4;
+}
+
+.memoji {
+	max-width: 200px;
+	margin-top: -50px;
+}
+
+/* load */
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.fadeInUp {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
