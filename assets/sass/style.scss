@@ -32,8 +32,10 @@
 @import "../bulma-0.7.5/sass/base/_all.sass";
 @import "../bulma-0.7.5/sass/elements/button.sass";
 @import "../bulma-0.7.5/sass/elements/container.sass";
+@import "../bulma-0.7.5/sass/elements/icon.sass";
 @import "../bulma-0.7.5/sass/elements/title.sass";
-// @import "../bulma-0.7.5/sass/form/_all.sass";
+@import "../bulma-0.7.5/sass/elements/notification.sass";
+@import "../bulma-0.7.5/sass/form/_all.sass";
 // @import "../bulma-0.7.5/sass/components/navbar.sass";
 @import "../bulma-0.7.5/sass/components/level.sass";
 // @import "../bulma-0.7.5/sass/layout/hero.sass";
@@ -60,41 +62,40 @@ body {
 	line-height: 1.4;
 }
 
+.hero .level-right {
+	@include from($tablet) {
+		align-self: normal;
+		display: block;
+	}
+}
+
 .memoji {
 	max-width: 200px;
-	margin-top: -50px;
+	// @include from($tablet) {
+	// 	margin-top: -50px;
+	// }
 }
 
-/* load */
-
-@keyframes fadeInUp {
-    from {
-        transform: translate3d(0,40px,0)
-    }
-
-    to {
-        transform: translate3d(0,0,0);
-        opacity: 1
-    }
+.contact.form,
+.form.notification {
+	margin-top: -40px;
+	display: none;
 }
 
-@-webkit-keyframes fadeInUp {
-    from {
-        transform: translate3d(0,40px,0)
-    }
+// .madewithbulma img {
+// 	display: inline-block;
+// 	vertical-align: middle;
+// }
 
-    to {
-        transform: translate3d(0,0,0);
-        opacity: 1
-    }
-}
+@import "animations.scss";
 
-.fadeInUp {
-    animation-duration: 2s;
-    animation-fill-mode: both;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-fill-mode: both;
-    opacity: 0;
-    animation-name: fadeInUp;
-    -webkit-animation-name: fadeInUp;
+// .contact {
+// 	overflow: hidden;
+// }
+
+.form.notification {
+	padding: .5em 1em;
+	// display: none;
+	margin-top: -40px;
+	margin-bottom: 60px;
 }
