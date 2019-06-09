@@ -112,7 +112,12 @@ $(document).ready(function () {
 		fetch(formRequest)
 	        .then(function(response) {
 	          if (response.status === 200) {
-	            hideContactForm();
+	            // hideContactForm();
+	            $form.removeClass("fadeInUp");
+				$form.addClass("fadeOutDown");
+				hideFormTimeout = setTimeout(function() {
+					$form.css("display", "none");
+				}, 1500); //$animation-duration
 	            showNotification("is-success", "check", "Message sent. Thank you!");
 	          } else {
 	            showNotification("is-danger", "exclamation-circle", "Something went wrong. Please try again");
